@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 80%;
+}
+
+.section{
+    min-width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    background-color: aquamarine;
+    
+    .fan-con{
+        max-width: 400px;
+        min-height: 300px;
+        place-self: center;
+        margin-top: 30px;
+
+        .blade-con{
+            min-width: 400px;
+            min-height: 400px;
+            display: flex;
+            background-color: yellow;
+            border: 15px solid black;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            animation: rotate 1s linear infinite;
+
+            img{
+                width: 100%;
+                height: 100%;
+                margin-right: 40px;
+                margin-bottom: 45px;
+          
+            }
+
+            @keyframes rotate{
+                from{
+                    transform: rotate(0deg);
+                }    
+                to{
+                    transform: rotate(360deg);
+                }    
+            }
+
+        }
+            .btn-con{
+                width: 400px;
+                padding-inline: 1rem;
+                position: relative;
+
+                .stand-con{
+                    width: 50px;
+                    height: 315px;
+                    background-color: black;
+                    position: absolute;
+                    left: 172px;
+                    bottom: 20px;
+                    
+                }
+
+                .btn-row-con{
+                    width: 75%;
+                    height: 60px;
+                    background-color: black;
+                    position: absolute;
+                    bottom: 0;
+                    left: 48px;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+
+                        .btn-off {
+                                background-color: red;
+
+                                &:focus{
+                                    animation:none;
+                                }
+                            }
+                        .btn-on {
+                                background-color: green;
+                            }
+                        .btn-1 {
+                                background-color: grey;
+                            }
+                        .btn-2 {
+                                background-color: grey;
+                            }
+
+                        .btn-3 {
+                                background-color: grey;
+                            }
+
+                    .btn{
+                        padding: 1rem .5rem;
+                        width: 50px;
+                        margin-left: 5px;
+                        margin-block: 6px;
+                        border-radius: 10px;
+                        border: none;
+                        cursor: pointer;
+                        
+                   
+                    }
+                }
+        }
+    }
+}
+
+.section {
+    height: 600px;
+    position: relative;
+    align-items: center;
+    place-content: center;
+
+    @keyframes growAnim-left {
+    
+    
+            0% {
+                background-color: red;
+                left: 0;
+            }
+    
+            25% {
+                background-color: yellow;
+            }
+    
+            50% {
+                background-color: blue;
+            }
+    
+            100% {
+                background-color: green;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+
+    .con-1 {
+        width: 200px;
+        height: 200px;
+        color: #fff;
+        text-align: center;
+        align-content: center;
+        position: absolute;
+        left: 200px;
+
+
+
+
+        background-color: red;
+        animation-name: growAnim-left;
+        animation-duration: 4s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes growAnim-right {
+        0% {
+            background-color: red;
+            right: 0;
+        }
+
+        25% {
+            background-color: yellow;
+        }
+
+        50% {
+            background-color: blue;
+        }
+
+        100% {
+            background-color: green;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .con-2 {
+        width: 200px;
+        height: 200px;
+        color: #fff;
+        position: absolute;
+        background-color: red;
+        text-align: center;
+        place-content: center;
+        right: 200px;
+        animation-name: growAnim-right;
+        animation-duration: 4s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+}
